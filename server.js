@@ -10,11 +10,7 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerFile = require("./swagger_output.json");
 
 admin.initializeApp({
-<<<<<<< HEAD
   credential: admin.credential.cert(serviceAccount),
-=======
-    credential: admin.credential.cert(serviceAccount),
->>>>>>> d14b19b24b2a9a85253612ee02d220ce686e29a6
 });
 
 const app = express();
@@ -28,10 +24,5 @@ app.use("/documentation", swaggerUi.serve, swaggerUi.setup(swaggerFile));
 app.use("/api", require("./routes/api"));
 
 app.listen(PORT, () => {
-<<<<<<< HEAD
   console.log(`Server is running on port ${PORT}`);
 });
-=======
-    console.log(`Server is running on port ${PORT}`);
-});
->>>>>>> d14b19b24b2a9a85253612ee02d220ce686e29a6
